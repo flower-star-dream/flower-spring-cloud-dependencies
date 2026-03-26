@@ -8,6 +8,31 @@
     <artifactId>flower-spring-cloud-dependencies</artifactId>
     <version>release-1.0.0</version>
     <packaging>pom</packaging>
+    <name>flower-spring-cloud-dependencies</name>
+    <description>Flower Spring Cloud 依赖管理（BOM）</description>
+    <url>https://github.com/flower-star-dream/flower-spring-cloud-dependencies</url>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <scm>
+        <connection>scm:git:https://github.com/flower-star-dream/flower-spring-cloud-dependencies.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com:flower-star-dream/flower-spring-cloud-dependencies.git</developerConnection>
+        <url>https://github.com/flower-star-dream/flower-spring-cloud-dependencies</url>
+    </scm>
+
+    <developers>
+        <developer>
+            <id>flower-star-dream</id>
+            <name>FlowerStarDream(花海)</name>
+            <url>https://github.com/flower-star-dream</url>
+        </developer>
+    </developers>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -30,7 +55,6 @@
         <commons-lang3.version>3.20.0</commons-lang3.version>
         <minio.version>8.6.0</minio.version>
         <wechatpay.version>0.2.17</wechatpay.version>
-        <statemachine.version>4.0.0</statemachine.version>
         <!-- 漏洞补丁 -->
         <protobuf-java.version>4.28.2</protobuf-java.version>
         <commons-beanutils.version>1.11.0</commons-beanutils.version>
@@ -44,7 +68,6 @@
         <flower-spring-cloud.version>release-1.0.0</flower-spring-cloud.version>
         <feign-reactor-spring-cloud.version>4.2.1</feign-reactor-spring-cloud.version>
         <nimbus-jose-jwt.version>10.8</nimbus-jose-jwt.version>
-        <asciitable.version>0.3.2</asciitable.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -76,12 +99,6 @@
               <groupId>org.apache.seata</groupId>
               <artifactId>seata-spring-boot-starter</artifactId>
               <version>${seata.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.springframework.statemachine</groupId>
-                <artifactId>spring-statemachine-starter</artifactId>
-                <version>${statemachine.version}</version>
             </dependency>
 
             <dependency>
@@ -264,11 +281,6 @@
                 <groupId>com.nimbusds</groupId>
                 <artifactId>nimbus-jose-jwt</artifactId>
                 <version>${nimbus-jose-jwt.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>de.vandermeer</groupId>
-                <artifactId>asciitable</artifactId>
-                <version>${asciitable.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

@@ -1,5 +1,7 @@
 # Flower Spring Cloud Dependencies
 
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/flower-star-dream/flower-spring-cloud-dependencies/blob/main/LICENSE)
+
 Flower Spring Cloud 的依赖管理模块（BOM），统一管理所有子模块和第三方依赖的版本。
 
 ## 项目简介
@@ -27,7 +29,6 @@ Flower Spring Cloud 的依赖管理模块（BOM），统一管理所有子模块
 | Fastjson2 | 2.0.49 |
 | Hutool | 5.8.40 |
 | MinIO | 8.6.0 |
-| Spring State Machine | 4.0.0 |
 | Transmittable ThreadLocal | 2.8.1 |
 | Apache Commons Lang3 | 3.20.0 |
 | WeChat Pay | 0.2.17 |
@@ -81,7 +82,6 @@ Flower Spring Cloud 的依赖管理模块（BOM），统一管理所有子模块
 | Spring Boot | `spring-boot-dependencies` |
 | Spring Cloud | `spring-cloud-dependencies` |
 | Spring Cloud Alibaba | `spring-cloud-alibaba-dependencies` |
-| Spring State Machine | `spring-statemachine-starter` |
 
 ### 数据访问
 
@@ -208,14 +208,24 @@ Flower Spring Cloud 的依赖管理模块（BOM），统一管理所有子模块
 </dependencyManagement>
 ```
 
-## 相关项目
+## 项目信息
 
-| 项目 | 说明 |
+| 项目 | 地址 |
 |------|------|
-| [flower-spring-cloud](https://github.com/your-org/flower-spring-cloud) | 基础框架主体项目 |
-| flower-spring-cloud-starter | 起步依赖模块 |
-| flower-core | 核心功能模块 |
+| 主页 | https://github.com/flower-star-dream/flower-spring-cloud-dependencies |
+| 基础框架 | https://github.com/flower-star-dream/flower-spring-cloud |
+| 问题反馈 | https://github.com/flower-star-dream/flower-spring-cloud-dependencies/issues |
 
 ## 许可证
 
-[Apache License 2.0](LICENSE)
+本项目采用 [Apache License 2.0](LICENSE) 许可证。
+
+```
+Copyright 2026 FlowerStarDream(花海)
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+```
