@@ -13,8 +13,9 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <spring-cloud.version>2024.0.3</spring-cloud.version>
-        <alibaba-cloud.version>2023.0.3.3</alibaba-cloud.version>
+        <spring-boot.version>3.5.12</spring-boot.version>
+        <spring-cloud.version>2025.0.1</spring-cloud.version>
+        <alibaba-cloud.version>2025.0.0.0</alibaba-cloud.version>
         <mysql.version>9.3.0</mysql.version>
         <seata.version>2.5.0</seata.version>
         <springdoc.version>2.3.0</springdoc.version>
@@ -27,7 +28,7 @@
         <fastjson2.version>2.0.49</fastjson2.version>
         <hutool.version>5.8.40</hutool.version>
         <commons-lang3.version>3.20.0</commons-lang3.version>
-        <minio.version>8.5.10</minio.version>
+        <minio.version>8.6.0</minio.version>
         <wechatpay.version>0.2.17</wechatpay.version>
         <statemachine.version>4.0.0</statemachine.version>
         <!-- 漏洞补丁 -->
@@ -39,10 +40,21 @@
         <commons-fileupload.version>1.6.0</commons-fileupload.version>
         <bcprov-jdk18on.version>1.78.1</bcprov-jdk18on.version>
         <guava.version>32.0.1-android</guava.version>
+
         <flower-spring-cloud.version>release-1.0.0</flower-spring-cloud.version>
+        <feign-reactor-spring-cloud.version>4.2.1</feign-reactor-spring-cloud.version>
+        <nimbus-jose-jwt.version>10.8</nimbus-jose-jwt.version>
+        <asciitable.version>0.3.2</asciitable.version>
     </properties>
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
             <!-- Spring Cloud -->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
@@ -233,12 +245,7 @@
             </dependency>
             <dependency>
                 <groupId>top.flowerstardream.base</groupId>
-                <artifactId>flower-core</artifactId>
-                <version>${flower-spring-cloud.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>top.flowerstardream.base</groupId>
-                <artifactId>flower-spring-cloud-autoconfigure</artifactId>
+                <artifactId>flower-spring-cloud</artifactId>
                 <version>${flower-spring-cloud.version}</version>
             </dependency>
             <dependency>
@@ -246,7 +253,23 @@
                 <artifactId>flower-spring-cloud-starter</artifactId>
                 <version>${flower-spring-cloud.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>com.playtika.reactivefeign</groupId>
+                <artifactId>feign-reactor-bom</artifactId>
+                <version>${feign-reactor-spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.nimbusds</groupId>
+                <artifactId>nimbus-jose-jwt</artifactId>
+                <version>${nimbus-jose-jwt.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>de.vandermeer</groupId>
+                <artifactId>asciitable</artifactId>
+                <version>${asciitable.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 </project>
